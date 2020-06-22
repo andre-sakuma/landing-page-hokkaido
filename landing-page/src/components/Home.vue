@@ -2,31 +2,52 @@
   <v-content>
     <div class="base">
       <div class="teste">
-        <p>oi</p>
+        <video autoplay muted loop id="myVideo">
+          <source src="../assets/terra_em_fogo.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="timer">
+        <Timer 
+         endtime="Jul 11, 2020 20:00:00" 
+         trans='{  
+         "day":"Day",
+         "hours":"Hours",
+         "minutes":"Minuts",
+         "seconds":"Seconds",
+         "expired":"Event has been expired.",
+         "running":"Till the end of event.",
+         "upcoming":"Till start of event.",
+         "status": {
+            "expired":"Expired",
+            "running":"Running",
+            "upcoming":"Future"
+           }}'
+         ></Timer>
       </div>
     </div>
   </v-content>
 </template>
 
 <script>
+  import Timer from "./Timer.vue"
   export default {
     name: 'Home',
-
     data: () => ({
       teste: 'oi'
     }),
+    components:{
+      Timer,
+    }
   }
 </script>
 
 <style scoped>
-  .base{
-    background: red;
+
+  video{
+    width:100%
+
   }
-  .teste{
+  .timer{
     margin: 0 auto;
-    background: gray;
-  }
-  p{
-    margin: auto;
   }
 </style>
