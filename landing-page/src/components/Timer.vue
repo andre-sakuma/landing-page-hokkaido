@@ -1,21 +1,23 @@
 <template>
     <div>
-        <div class="counter">
-            <div class="monitor">
-                <div class="number"><span class="number">{{ days }}</span></div>
-                <div class="format"><span class="formatText">Dias</span></div>
-            </div>
-            <div class="monitor">
-                <div class="number"><span class="number">{{ hours }}</span></div>
-                <div class="format"><span class="formatText">Horas</span></div>
-            </div>
-            <div class="monitor">
-                <div class="number"><span class="number">{{ minutes }}</span></div>
-                <div class="format"><span class="formatText">Minutos</span></div>
-            </div>
-            <div class="monitor">
-                <div class="number"><span class="number">{{ seconds }}</span></div>
-                <div class="format"><span class="formatText">Segundos</span></div>
+        <div class="content">
+            <div class="counter">
+                <div class="monitor">
+                    <div class="number"><span class="number">{{ days }}</span></div>
+                    <div class="format"><span class="formatText">Dias</span></div>
+                </div>
+                <div class="monitor">
+                    <div class="number"><span class="number">{{ hours }}</span></div>
+                    <div class="format"><span class="formatText">Horas</span></div>
+                </div>
+                <div class="monitor">
+                    <div class="number"><span class="number">{{ minutes }}</span></div>
+                    <div class="format"><span class="formatText">Minutos</span></div>
+                </div>
+                <div class="monitor">
+                    <div class="number"><span class="number">{{ seconds }}</span></div>
+                    <div class="format"><span class="formatText">Segundos</span></div>
+                </div>
             </div>
         </div>
     </div>
@@ -98,16 +100,17 @@ export default {
 
 <style scoped>
 .counter{
-    background: #0d193c;
+    background: #dedede;
+    border-radius:15px;
     display:flex;
-    height:150px;
+    height:10%;
     width:50%;
     margin:0 auto;
 }
 .number{
     text-align:center;
     font-size:5vw;
-    color:white;
+    color: #ff5757;
     margin: 0 auto;
     width:80%;
 }
@@ -117,7 +120,7 @@ export default {
 .formatText{
     margin: auto;
     font-size:2vw;
-    color: white
+    color:  #ff5757
 }
 .monitor{
     margin: 0 auto;

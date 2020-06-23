@@ -1,18 +1,17 @@
 <template>
-    <v-content>
+    <div>
         <div class="news">
-            <instagram-embed :url="'https://www.instagram.com/p/Bs_yHwHBjKo/'" :max-width="1200"/>
+            <div class="post">
+            </div>
         </div>
-    </v-content>
+    </div>
 </template>
 
 <script>
-import InstagramEmbed from 'vue-instagram-embed';
 
 export default {
     name: 'News',
     components: {
-        InstagramEmbed
     },
     data: () => ({
         teste: 'oi'
@@ -22,12 +21,13 @@ export default {
 </script>
 
 <style scoped>
+    .insta{
+        margin: 0 auto;
+    }
     .news{
-        width:80%;
+        width:70%;
         margin: 50px auto;
         background: #dedede;
     }
-div {
-    background: #0d193c;
-}
+
 </style>

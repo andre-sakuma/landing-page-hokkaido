@@ -1,5 +1,5 @@
 <template>
-  <v-content>
+  <div class="fundo">
     <div class="base">
       <div class="teste">
         <video autoplay muted loop id="myVideo">
@@ -25,7 +25,7 @@
          ></Timer>
       </div>
     </div>
-  </v-content>
+  </div>
 </template>
 
 <script>
@@ -42,10 +42,12 @@
 </script>
 
 <style scoped>
-
+  .fundo{
+    background:rgb(59, 75, 121);
+    padding-bottom: 150px;
+  }
   video{
     width:100%
-
   }
   .timer{
     margin: 0 auto;
