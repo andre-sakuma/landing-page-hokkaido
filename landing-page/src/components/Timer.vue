@@ -2,21 +2,24 @@
     <div>
         <div class="content">
             <div class="counter">
-                <div class="monitor">
-                    <div class="number"><span class="number">{{ days }}</span></div>
-                    <div class="format"><span class="formatText">Dias</span></div>
-                </div>
-                <div class="monitor">
-                    <div class="number"><span class="number">{{ hours }}</span></div>
-                    <div class="format"><span class="formatText">Horas</span></div>
-                </div>
-                <div class="monitor">
-                    <div class="number"><span class="number">{{ minutes }}</span></div>
-                    <div class="format"><span class="formatText">Minutos</span></div>
-                </div>
-                <div class="monitor">
-                    <div class="number"><span class="number">{{ seconds }}</span></div>
-                    <div class="format"><span class="formatText">Segundos</span></div>
+                <div class="timerSpan"><div><p>EM BREVE!</p></div></div>
+                <div class="timer">
+                    <div class="monitor">
+                        <div class="number"><span class="number">{{ days }}</span></div>
+                        <div class="format"><span class="formatText">Dias</span></div>
+                    </div>
+                    <div class="monitor">
+                        <div class="number"><span class="number">{{ hours }}</span></div>
+                        <div class="format"><span class="formatText">Horas</span></div>
+                    </div>
+                    <div class="monitor">
+                        <div class="number"><span class="number">{{ minutes }}</span></div>
+                        <div class="format"><span class="formatText">Minutos</span></div>
+                    </div>
+                    <div class="monitor">
+                        <div class="number"><span class="number">{{ seconds }}</span></div>
+                        <div class="format"><span class="formatText">Segundos</span></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -100,12 +103,27 @@ export default {
 
 <style scoped>
 .counter{
+    padding: 15px 0;
     background: #dedede;
     border-radius:15px;
-    display:flex;
     height:10%;
     width:50%;
     margin:0 auto;
+}
+.timer{
+    display:flex;
+}
+.timerSpan{
+    width:100%
+}
+.timerSpan div{
+    width: 42%;
+    margin:0 auto;
+}
+.timerSpan div p{
+    font-size: 4vw;    
+    margin:0 auto;
+    color: #ff5757;
 }
 .number{
     text-align:center;
@@ -120,7 +138,7 @@ export default {
 .formatText{
     margin: auto;
     font-size:2vw;
-    color:  #ff5757
+    color: #ff5757;
 }
 .monitor{
     margin: 0 auto;

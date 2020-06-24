@@ -44,7 +44,7 @@
 <style scoped>
   .fundo{
     background:rgb(59, 75, 121);
-    padding-bottom: 150px;
+    padding-bottom: 50px;
   }
   video{
     width:100%

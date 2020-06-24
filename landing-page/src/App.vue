@@ -85,7 +85,7 @@ export default {
     }
   },
   data: () => ({
-    content: 'video',
+    content: 'home',
     icon: menu,
     drawer: null,
     items: [
