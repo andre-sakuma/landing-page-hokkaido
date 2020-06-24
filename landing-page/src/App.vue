@@ -9,7 +9,7 @@
             contain
             src="./assets/logo-hokkaido-fogo.png"
             transition="scale-transition"
-            width="80%"
+            max-width="250px"
             @click="contentChanger('home')"
           />
         </button>
@@ -46,6 +46,11 @@
     <div class="content">
       <v-content v-if="content === 'home'">
         <Home />
+        <div class="btnHolder">
+          <div class="formButton">
+            <v-btn block x-large color="#ff5757"  @click="contentChanger('inscricao')"><p>Faça a sua inscrição!</p></v-btn>
+          </div>
+        </div>
       </v-content>
       <v-content v-else-if="content === 'video'">
         <Video />
@@ -69,7 +74,6 @@ import Home from "./components/Home.vue";
 import Footer from "./components/Footer.vue";
 import Video from "./components/Video.vue";
 import News from "./components/News.vue";
-import menu from "./assets/menu.svg";
 
 export default {
   name: "App",
@@ -84,15 +88,20 @@ export default {
       this.content = content
     }
   },
+  events: {
+    'child-msg': function(msg){
+      console.log(msg)
+      this.contentChanger(msg);
+    }
+  },
   data: () => ({
     content: 'home',
-    icon: menu,
     drawer: null,
     items: [
       { title: 'Home', content: 'home' },
-      { title: 'Cancao', content: 'video' },
-      { title: 'Noticias', content: 'instagram' },
-      { title: 'Inscricao', content: 'inscricao' },
+      { title: 'Canção', content: 'video' },
+      { title: 'Notícias', content: 'instagram' },
+      { title: 'Inscrição', content: 'inscricao' },
     ],
   }),
   props: {
@@ -133,5 +142,17 @@ export default {
   }
   button{
     outline:none
+  }
+  .formButton{
+    width: 60%;
+    margin: 0 auto;    
+  }
+  .formButton p{
+    margin: auto 0;
+    color: #dedede;
+    font-size: 1.5vw;
+  }
+  .btnHolder{
+    width:100%;
   }
 </style>

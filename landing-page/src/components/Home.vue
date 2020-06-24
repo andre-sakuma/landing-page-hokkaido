@@ -24,6 +24,7 @@
            }}'
          ></Timer>
       </div>
+      
     </div>
   </div>
 </template>
@@ -33,8 +34,12 @@
   export default {
     name: 'Home',
     data: () => ({
-      teste: 'oi'
+      teste: 'oi',
+      msg: '',
     }),
+    props:{
+      content: String
+    },
     components:{
       Timer,
     }
